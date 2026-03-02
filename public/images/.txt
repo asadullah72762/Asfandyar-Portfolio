@@ -1,0 +1,229 @@
+<?php 
+    $path = ''; 
+    include 'header.php'; 
+?>
+
+<!-- Admission Hero Section -->
+<div class="container-fluid col-12 admission-main-img page-hero" style="background-image: url('assets/images/carousel_img2.jpg');">
+    <div class="background-overlay"> 
+        <div class="admission-main-img-text text-center text-white" style="position: relative; z-index: 2; padding-top: 15%;">
+            <p data-aos="fade-down" style="font-size: 1.2rem; letter-spacing: 2px;">HOME &nbsp;/&nbsp; ADMISSION</p>
+            <h1 data-aos="fade-up" data-aos-delay="300" style="font-size: 3.5rem; font-weight: 700;">ADMISSION FORM</h1>
+        </div>
+    </div>     
+</div>
+
+<div class="container py-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-lg-10 col-xl-9">
+            <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                    <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center" style="color: var(--primary-color);">Registration Form</h3>
+            
+                    <form method="post" action="<?=$_SERVER['PHP_SELF'];?>" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="firstName">Name</label>
+                                    <input type="text" name="name" id="firstName" class="form-control form-control-lg" placeholder="Enter Your Name" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="lastName">S/O, D/O, W/O</label>
+                                    <input type="text" name="father_name" placeholder="Enter Guardian Name" id="lastName" class="form-control form-control-lg" required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline datepicker w-100">
+                                    <label for="birthdayDate" class="form-label">Date of Birth</label>
+                                    <input type="date" name="birth_day" class="form-control form-control-lg" id="birthdayDate" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <h6 class="mb-2 pb-1">Gender:</h6>
+                                <div class="d-flex align-items-center mt-2">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="femaleGender" value="female" checked />
+                                        <label class="form-check-label" for="femaleGender">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="maleGender" value="male" />
+                                        <label class="form-check-label" for="maleGender">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="otherGender" value="other"/>
+                                        <label class="form-check-label" for="otherGender">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="cnic">CNIC</label>
+                                    <input type="text" name="cnic" id="cnic" class="form-control form-control-lg" placeholder="Enter Your CNIC" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="nationality">Nationality</label>
+                                    <input type="text" name="nationality" id="nationality" class="form-control form-control-lg" placeholder="Enter Your Nationality" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="qualification">Qualification</label>
+                                    <input type="text" name="qualification" id="qualification" class="form-control form-control-lg" placeholder="Enter Your Qualification" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="contact">Contact Number</label>
+                                    <input type="tel" name="contact" id="contact" class="form-control form-control-lg" placeholder="Enter Your Contact" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <label class="form-label select-label">Select Course</label>
+                                <select name="course" class="select form-control form-control-lg" required>
+                                    <option value="" disabled selected>Choose option</option>
+                                    <optgroup label="1 Year Courses">
+                                       <option value="Ultrasound Physics & Instrumentation">Diploma in Diagnostic Ultrasound (DDU) 1 Year</option>
+                                    </optgroup>
+                                    <optgroup label="6 Month Courses in Radiology">
+                                        <option value="MRI">MRI</option>
+                                        <option value="CT Scan">CT Scan</option>
+                                        <option value="Fluoroscopy">Fluoroscopy</option>
+                                    </optgroup>
+                                    <optgroup label="6 Month Courses in Ultrasound">
+                                        <option value="Professional Diploma In Medical Diagnostic Ultrasound">Professional Diploma In Medical Diagnostic Ultrasound</option>
+                                    </optgroup>
+                                    <optgroup label="4 Month Courses">
+                                       <option value="Obstetrical & Gynecological Ultrasound">Obstetrical & Gynecological Ultrasound</option>
+                                        <option value="Abdominal and Pelvic Ultrasound">Abdominal and Pelvic Ultrasound</option>
+                                        <option value="Vascular Ultrasound">Vascular Ultrasound</option>
+                                        <option value="Small Part Ultrasound">Small Part Ultrasound</option>
+                                        <option value="MSK Ultrasound">MSK Ultrasound</option>
+                                        <option value="Interventional Ultrasound">Interventional Ultrasound</option>
+                                        <option value="Echocardiography & ECG">Echocardiography & ECG</option>
+                                        <option value="TVS ultrasound with Folliculometry">TVS ultrasound with Folliculometry</option>
+                                        <option value="Dental Radiography">Dental Radiography</option>
+                                        <option value="X-ray Radiography">X-ray Radiography</option>
+                                        <option value="Mammography">Mammography</option>
+                                        <option value="Nuclear Medicine">Nuclear Medicine</option>
+                                    </optgroup>
+                                    <optgroup label="3 Month Courses">
+                                       <option value="Radiation Protection">Radiation Protection</option>
+                                        <option value="PET-CT">PET-CT</option>
+                                        <option value="Hybrid Modalities">Hybrid Modalities</option>
+                                        <option value="PET-MRI">PET-MRI</option>
+                                        <option value="SPECT-CT">SPECT-CT</option>
+                                        <option value="DTPA Scan">DTPA Scan</option>
+                                    </optgroup>
+                                    <optgroup label="ARDMS & HCPC">
+                                       <option value="RDMS (SPI)">RDMS (SPI)</option>
+                                        <option value="RDMS (ABDOMEN)">RDMS (ABDOMEN)</option>
+                                        <option value="RDMS (OBS/GYN)">RDMS (OBS/GYN)</option>
+                                        <option value="RDCS (Echocardiography)">RDCS (Echocardiography)</option>
+                                        <option value="RMSK/RMSKS (Musculoskeletal)">RMSK/RMSKS (Musculoskeletal)</option>
+                                        <option value="RVT (Vascular)">RVT (Vascular)</option>
+                                        <option value="hcpc UK health & care professions council">hcpc UK health & care professions council</option>
+                                    </optgroup>
+                                 </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="Enter Your Email" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="img">Upload Your Passport Size Image</label>
+                                    <input type="file" name="img" id="img" class="form-control form-control-lg" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-2">
+                            <input class="btn btn-primary btn-lg w-100" type="submit" name="submit" value="Submit Application" />
+                        </div>
+ 
+                        <hr class="my-4">
+
+                        <div class="alert alert-info" role="alert" style="font-family: 'Poppins', sans-serif;">
+                            <h4 class="alert-heading">Payment Information</h4>
+                            <p><strong>Account Title:</strong> RABBANI SCHOOL OF RADIOLOGY AND SONOLOGY</p>
+                            <p><strong>Bank:</strong> UBL</p>
+                            <p><strong>Account No:</strong> 319949144</p>
+                            <p><strong>IBAN code:</strong> PK45UNIL0109000319949144</p>
+                            <p><strong>EasyPaisa:</strong> 092 3449730445</p>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php 
+if (isset($_POST['submit'])) 
+{
+  $servername="localhost";
+  $username="rsrsedup_rsrs";
+  $password="Vke2unDChFv5WGsdsZrK";
+  $database="rsrsedup_rsrs";
+
+  //Create Connection
+  $conn=mysqli_connect($servername, $username, $password,$database);
+
+  if(!$conn) {
+     die("Sorry we failed to connect: ".mysqli_connect_error());
+  }
+
+  $name = $_POST['name'];
+  $father_name = $_POST['father_name'];
+  $birth_day = $_POST['birth_day'];
+  $gender = $_POST['gender'];
+  $cnic = $_POST['cnic'];
+  $nationality = $_POST['nationality'];
+  $qualification = $_POST['qualification'];
+  $contact = $_POST['contact'];
+  $course = $_POST['course'];
+  $email = $_POST['email'];
+  $filename = $_FILES['img']['name'];
+  $tempname = $_FILES['img']['tmp_name'];
+  $img="student_images/".$filename; 
+  
+  move_uploaded_file($tempname,$img); 
+
+  $sql ="INSERT INTO `admission` (`name`,`father_name`,`birth_day`,`gender`,`cnic`,`nationality`,`qualification`,`contact`,`course`,`email`,`img`) VALUES ('$name','$father_name','$birth_day','$gender','$cnic','$nationality','$qualification','$contact','$course','$email','http://www.rsrs.com.pk/$img')";
+
+  $run = mysqli_query($conn , $sql);
+
+  if ($run == true) {
+      echo "<script>swal('Successful!', 'Applied Successfully!', 'success');</script>";
+  } else {
+      echo "<script>swal('Unsuccessful!', 'Failed to Apply!', 'error');</script>";
+  }
+}
+?>
+
+<?php include 'includes/footer.php'; ?>
