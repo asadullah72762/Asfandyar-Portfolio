@@ -30,7 +30,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Email',
-      value: 'asfandyar@example.com'
+      value: 'asfandyarhussain137@gmail.com'
     },
     {
       icon: (
